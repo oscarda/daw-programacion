@@ -92,3 +92,24 @@ print_r( $carpetas);
 $frase = "En otoño los árboles dejan caer sus hojas";
 $palabras = explode(" ", $frase);
 print_r( $palabras);
+
+
+echo "\n6) Arreglos asociativos, hash maps o diccionarios:";
+// Un arreglo de php, además de tener índices numéricos, $a[3], acepta cadenas de texto como índices $a["color"].
+// Es decir, se pueden utilizar como arreglos o matrices asociativas:
+$usuario['nombre'] = "Marta";
+$usuario['clave'] = "12345";
+$usuario['edad'] = 28;
+print_r( $usuario );
+
+//otra forma de inicializar el arreglo sería:
+$usuario = array('nombre' => "Marta", 'clave' => "12345", 'edad' => 28);
+print_r ($usuario);
+
+//podemos tener arreglos que mezclen los dos tipos de índices:
+$usuario[5] = 2054;
+
+//para recorrer un arreglo asociativo con un bucle foreach:
+foreach($usuario as $clave => $valor) {
+    echo "$clave: $valor\n";
+}
